@@ -23,15 +23,9 @@ jobs:
       
       - name: Build
         run: gatsby build
-      
-      - name: Verify build
-        run: ls -la public
         
       - name: zip public directory
         run: zip -r gatsby-website.zip public
-        
-      - name: Verify zip file
-        run: ls -la 
         
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
