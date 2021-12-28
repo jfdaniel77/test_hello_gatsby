@@ -32,3 +32,15 @@ jobs:
         
       - name: Verify zip file
         run: ls -la 
+        
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: gatsby-website
+          path: gatsby-website.zip
+          retention-days: 5
+          
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: gatsby-website
