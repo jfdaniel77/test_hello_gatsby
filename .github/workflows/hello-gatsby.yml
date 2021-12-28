@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install required libraries
-        run: apt-get install zip -y
+        run: sudo apt-get install zip -y
         
       - name: Checkout Code
         uses: actions/checkout@v2
