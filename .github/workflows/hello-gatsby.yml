@@ -11,4 +11,4 @@ jobs:
       - run: npm ci
       - run: ls -la
       - run: npm install -g gatsby-cli
-#       - run: gatsby develop
+      - run: gatsby build
