@@ -4,6 +4,9 @@ jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
+      - name: Install required libraries
+        run: apt-get install zip -y
+        
       - name: Checkout Code
         uses: actions/checkout@v2
       
@@ -23,3 +26,9 @@ jobs:
       
       - name: Verify build
         run: ls -la public
+        
+      - name: zip public directory
+        run: zip -r gatsby-website.zip public
+        
+      - name: Verify zip file
+        run: ls -la 
