@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: gatsby build
         
-      - name: zip public directory
+      - name: Zip public directory
         run: zip -r gatsby-website.zip public
         
       - name: Archive code coverage results
@@ -32,9 +32,9 @@ jobs:
         with:
           name: gatsby-website
           path: gatsby-website.zip
-          retention-days: 5
+          retention-days: 1
           
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: gatsby-website
+#       - name: Download a single artifact
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: gatsby-website
